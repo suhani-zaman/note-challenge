@@ -11,5 +11,6 @@ function expect(actual) {
     }
   }
 }
-
-expect(seeNoteFull(message)).toEqual(message)
+note = new Message
+message = "I'm a new note!"
+expect(note.seeNoteFull(message)).toEqual(message)
