@@ -20,28 +20,23 @@ class Note {
     })
   }
 
+  clearAllNotes(){
+    if(!confirm('Pretty sure you want to delete all notes?')) return;
+    this.notePad = [];
+    localStorage.removeItem('notes');
+    clearMainView();
+    document.querySelectorAll('.note').forEach((noteNode) => document.body.removeChild(noteNode));
+  }
+
   saveNotes(){
     localStorage.setItem('notes', JSON.stringify(this.notePad.map((value) => {
       return value.seeNoteFull();
     })));
   }
 
-	listNotes(note) {// load notes
-		let message;
-		let index;
-		if (note == null) {
-			//load all the notes
-			this.notePad.forEach((thisNote) => {
-				console.log("load all notes");
-				message = thisNote.getNoteTitle();
-				noteToHtml(message, index);
-			});
-		} else {
-			index = this.notePad.length - 1;
-			message = note.getNoteTitle();
-			//load just this note
-			console.log("load one note");
+	listNotes(note) {
+			let index = this.notePad.length - 1;
+			let message = note.getNoteTitle();
 			noteToHtml(message, index);
-		}
 	}
 }
