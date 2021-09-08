@@ -9,10 +9,17 @@ window.onload = function () {
 
 function noteToHtml(message, index) {
 	div = document.createElement("div");
-	div.id = index;
+	div.id = 'a' + index;
 	div.innerHTML = message;
-	div.setAttribute('onclick', `noteToMainView(${index})`)
+	div.setAttribute('onclick', `noteToMainView(this, ${index})`)
 	document.body.insertAdjacentElement("beforeend", div);
 }
 
-function noteToMainView(index) {}
+function noteToMainView(caller, index) {
+  let prevView = document.querySelector('#fullId');
+  if(prevView !== null) prevView.parentNode.removeChild(prevView);
+  let fullView = document.createElement('h3');
+  fullView.setAttribute('id', 'fullId');
+  fullView.innerHTML = `${noteClass.notePad[index].seeNoteFull()}`;
+  caller.insertAdjacentElement('beforebegin',fullView);
+}
