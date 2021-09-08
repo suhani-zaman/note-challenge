@@ -6,7 +6,7 @@ describe("Note class", () => {
     expect(1).toEqual(1);
   })
 
-  it("some and some", () => {
+  it("some and some new", () => {
     
     expect(1).toEqual(2);
   })
