@@ -11,8 +11,8 @@ function noteToHtml(message, index) {
 	div = document.createElement("div");
 	div.id = index;
 	div.innerHTML = message;
-	//div.setAttribute('onclick', )
+	div.setAttribute('onclick', `noteToMainView(${index})`)
 	document.body.insertAdjacentElement("beforeend", div);
 }
 
-function noteToMainView(message) {}
+function noteToMainView(index) {}
