@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>spec runner</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <meta http-equiv="Pragma" content="no-cache" /> <meta http-equiv="Expires" content="0" />
+
+  <script src="testEnvironment.js"></script>
+  <script src="/src/message.js"></script>
+  <script src="/src/note.js"></script>
+  <script src="/src/interface.js"></script>
+  <!--<script src="/spec/noteSpec.js"></script>-->
+  <style>
+    div{display:block; border:1px solid rgba(0,0,0,0.1); margin-top:0.33rem; padding:0.5rem 1rem;}
+    div[data-passed="false"]{background-color: rgba(255, 0, 0 ,0.5);}
+  </style>
+</head>
+<body>
+    <h4>
+        <input type="text" id="noteValue" placeholder="add your note message here" value=""/>
+        <input type="button" id="addNote" value="Create note"/>
+    </h4>
+
+
+</body>
+</html>
