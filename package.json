@@ -16,7 +16,6 @@
     "url": "https://github.com/suhani-zaman/note-challenge/issues"
   },
   "homepage": "https://github.com/suhani-zaman/note-challenge#readme",
-  "dependencies": {},
   "devDependencies": {
     "http-server": "^13.0.1"
   }
