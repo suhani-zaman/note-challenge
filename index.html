@@ -12,11 +12,13 @@
   <style>
     div{display:block; border:1px solid rgba(0,0,0,0.1); margin-top:0.33rem; padding:0.5rem 1rem;}
     div[data-passed="false"]{background-color: rgba(255, 0, 0 ,0.5);}
+    #noteValue{display:block; width:50%; margin-left:25%; resize:none;}
+    #addNote{display:block; width:25%; margin-left:37.5%; margin-top:0.5rem;}
   </style>
 </head>
 <body>
     <h4>
-        <input type="text" id="noteValue" placeholder="add your note message here" value=""/>
+        <textarea id="noteValue" placeholder="add your note message here" value=""></textarea>
         <input type="button" id="addNote" value="Create note"/>
     </h4>
 

@@ -4,7 +4,8 @@ class Note{
       }
 
       createNote(message){
-        let note = new Message(message);
+        if(message.replace(/ /g, '') === "") return;
+        let note = new Message(message.trim());
         this.notePad.push(note);
         this.listNotes(note);
       }
