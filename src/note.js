@@ -1,5 +1,6 @@
 class Note {
 	constructor() {
+    this.emoji = new Emoji();
 		this.notePad = [];
     this.loadNotes();
 	}
@@ -10,6 +11,7 @@ class Note {
 		this.notePad.push(note);
 		this.listNotes(note);
     if(saveMessage == null){ this.saveNotes(); }  // "==" value type check 
+
 	}
 
   loadNotes(){

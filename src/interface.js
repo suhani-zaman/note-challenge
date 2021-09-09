@@ -1,9 +1,10 @@
 window.onload = function () {
-	noteClass = new Note();
+	let noteClass = new Note();
 	document.querySelector("#addNote").addEventListener("click", () => {
 		let message = document.querySelector("#noteValue").value;
 		document.querySelector("#noteValue").value = "";
-		noteClass.createNote(message);
+    noteClass.emoji.getText(message, noteClass);
+		
 	});
   document.querySelector('#clearAllNotes').addEventListener("click",() => {
     noteClass.clearAllNotes();
