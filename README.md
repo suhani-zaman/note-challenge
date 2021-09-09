@@ -21,3 +21,20 @@ As a programmer
 I can see the full text of an individual note on its own page		
 So I can see all the information in the note				
 ```
+
+# planning
+
+		MVP		
+Class Message		Class Note		  Test enviroment
+Attributes:		    Attributes:		   Functions/matchers
+ - message(string)	 - notepad = []    - collection of notes Objects		
+				     - toEqual(val)
+Functions:		    Functions:		   - notToEqual(val)
+ - seeNoteFull()    - load full view 	 - createNote() - create and save a single note		
+  of a single note		 - listNotes() - list all notes as 20 chars "titles"		 - toThrow(err) - error
+ - getNoteTitle()    - get 20 chars 				
+length abreviation 
+of a single note	 loadNotes()                   - from local storage		
+saveNotes() 
+- to local storage		
+				

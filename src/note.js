@@ -4,12 +4,12 @@ class Note {
     this.loadNotes();
 	}
 
-	createNote(message, doNotCreateNote) {
-		if (message.replace(/ /g, "") === "") return;
-		let note = new Message(message.trim());
+	createNote(message, saveMessage) {   
+		if (message.replace(/ /g, "") === "") return;  //note with just space can't be saved
+		let note = new Message(message);      
 		this.notePad.push(note);
 		this.listNotes(note);
-    if(doNotCreateNote == null){ this.saveNotes(); }
+    if(saveMessage == null){ this.saveNotes(); }  // "==" value type check 
 	}
 
   loadNotes(){
