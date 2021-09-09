@@ -27,10 +27,14 @@ div {
         transform: translate3d(4px, 0, 0);
     }
   }
-  .left{float:left;margin-top:-1rem;}
-  .right{float:right;margin-top:-1rem;}
+  .left{float:left;}
+  .right{float:right;}
   .keep-center{text-align:center; vertical-align:middle;}
   .keep-right{text-align:right;}
+  .top-1{margin-top:-1rem;}
+  .top_1{margin-top:1rem;}
+  .top_14{margin-top:1.4rem;}
+  .bottom_1{margin-bottom:1rem;}
   div[data-passed="false"] {
     background-color: rgba(255, 0, 0, 0.5);
   }
@@ -41,6 +45,7 @@ div {
     resize: none;
     border-radius: .25rem;
     text-indent: 1rem;
+    padding:.5rem .25rem;
   }
   h4{margin-bottom: 1rem;}
   #addNote {
@@ -57,9 +62,12 @@ div {
     background-color: white;
     border-radius: 0.5rem;
     padding: 1rem 2.5rem;
-    box-shadow: 0 .25rem .25rem 0 rgba(0 ,0 ,0 , .25);
-    margin-bottom: .4rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 .125rem .125rem 0 rgba(0 ,0 ,0 , .25);
   }
+  #fullId > input[type="button"]{position:absolute; bottom:-1.8rem; right:1rem;}
+  .box-shadow{box-shadow: 0 .125rem .125rem 0 rgba(0 ,0 ,0 , .25);}
   .note::before{content:'# '; color:#64686a;}
+  .note::after{content:'..'; color:#64686a;}
   .logo{font-family:"Caveat"}
   #fullId + div{display:none;}

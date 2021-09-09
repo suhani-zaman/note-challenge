@@ -15,23 +15,33 @@ class Note {
   loadNotes(){
     let prevNotes = localStorage.getItem('notes');
     if(prevNotes == null) return;
-    JSON.parse(prevNotes).forEach((note) => {
-      this.createNote(note, 'doNotSaveLocalStorage');
+    JSON.parse(prevNotes).forEach((message) => {
+        this.createNote(message, 'doNotSaveLocalStorage');
     })
   }
 
   clearAllNotes(){
-    if(!confirm('Pretty sure you want to delete all notes?')) return;
+    if(!confirm('Sure you want to delete all notes?')) return;
     this.notePad = [];
     localStorage.removeItem('notes');
     clearMainView();
     document.querySelectorAll('.note').forEach((noteNode) => document.body.removeChild(noteNode));
   }
 
+  deleteNote(index, delButton){
+    if(!confirm('Sure you want to delete this note?')) return;
+    this.notePad[index] = '';
+    this.saveNotes();
+    document.body.removeChild(delButton.parentElement.nextElementSibling);
+    clearMainView();
+  }
+
   saveNotes(){
-    localStorage.setItem('notes', JSON.stringify(this.notePad.map((value) => {
+    localStorage.setItem('notes', JSON.stringify(this
+      .notePad.filter((value) => { return value != ''; })
+      .map((value) => {
       return value.seeNoteFull();
-    })));
+      })));
   }
 
 	listNotes(note) {
