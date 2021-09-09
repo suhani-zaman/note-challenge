@@ -1,5 +1,5 @@
 class Emoji{
-  getText(text, classCall){
+  getText(text, classCall){ (() => {
     let formData = new FormData();
     let url = encodeURI('https://makers-emojify.herokuapp.com/');
     fetch(url, {
@@ -10,12 +10,12 @@ class Emoji{
         body:'{"text": "' + text + '"}'
     }).then((response) => response.json())
     .then((response) => {
-        let noteClass = new Note();
-        noteClass.createNote(response.emojified_text);
+        //const classCall = new Note();
+        classCall.createNote(response.emojified_text);
     })
 
 
-    
+   })(classCall);
   }
 }
 
