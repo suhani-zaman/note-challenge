@@ -1,9 +1,21 @@
+body {
+   background-image: linear-gradient(#00ccff,white,#00ccff);
+   background-size: 100%;
+   
+}
+
+html {
+  height:100%;
+}
+
+
 div {
     display: block;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 0.33rem;
     padding: 0.5rem 1rem;
     border-radius: .25rem 1rem .25rem 1rem;
+    background-color: whitesmoke;
   }
   div:nth-of-type(2n + 1){border-radius: 1rem .25rem 1rem .25rem;}
   .button{cursor:pointer; display:inline-block;padding:0.25rem 0.5rem; border:solid 1px rgba(0, 0, 0, .3); border-radius: .25rem; text-decoration: none; position:relative; transition: all 200ms; background-color:white; color:#222426;}
@@ -11,7 +23,7 @@ div {
   .blue{background-color:#007bff !important; color:white !important; border:none !important;}
   .green{background-color:#6c757d !important; color:white !important; border:none !important;}
   .red{background-color:#dc3545 !important; color:white !important; border:none !important;}
-  .round{border-radius:5rem !important;padding-left:2.5rem !important;padding-right:2.5rem !important;}
+  .round{background-color: b !important; border-radius:5rem !important;padding-left:2.5rem !important;padding-right:2.5rem !important;}
   div:hover{animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;}
   @keyframes shake {
     10%, 90% {
@@ -71,3 +83,10 @@ div {
   .note::after{content:'..'; color:#64686a;}
   .logo{font-family:"Caveat"}
   #fullId + div{display:none;}
+
+  #mainTitle {
+    font-family: "Caveat";
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+  }
