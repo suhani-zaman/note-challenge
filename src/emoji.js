@@ -1,5 +1,8 @@
 class Emoji{
   getText(text, classCall){ (() => {
+      text = text.replace(/((?![ ]).){1,1}(:((?![ :]).)+:)/g, '$1 $2');
+      text = text.replace(/(:((?![ :]).)+:)((?![ ]).){1,1}/g, '$1 $2');
+      // :{: }:
     let formData = new FormData();
     let url = encodeURI('https://makers-emojify.herokuapp.com/');
     fetch(url, {

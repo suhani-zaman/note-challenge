@@ -68,6 +68,6 @@ div {
   #fullId > input[type="button"]{position:absolute; bottom:-1.8rem; right:1rem;}
   .box-shadow{box-shadow: 0 .125rem .125rem 0 rgba(0 ,0 ,0 , .25);}
   .note::before{content:'# '; color:#64686a;}
-  .note::after{content:'..'; color:#64686a;}
+  .note::after{content:' ..'; color:#64686a;}
   .logo{font-family:"Caveat"}
   #fullId + div{display:none;}

@@ -2,13 +2,17 @@
 <html>
   <head>
     <title>spec runner</title>
-
-  
-  <script src="./src/messageClass.js"></script>
-  <script src="./spec/messageClassSpec.js"></script>
+  <script src="./testEnvironment.js"></script>
+  <script src="./src/emoji.js"></script>
+  <script src="./src/interface.js"></script>
+  <script src="./src/note.js"></script>
+  <script src="./spec/noteSpec.js"></script>
+  <script src="./src/message.js"></script>
+  <script src="./spec/messageSpec.js"></script>
   <style>
-    div[data-passed]{display:block; width:100%; border:1px solid rgba(0,0,0,0.1);}
+    div[data-passed]{display:block; width:100%; border:1px solid rgba(0,0,0,0.1);margin-top:0.25rem;}
     div[data-passed="false"]{background-color: rgba(255, 0, 0 ,0.5);}
+    .note{display:none !important;}
   </style>
 </head>
 <body>
