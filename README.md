@@ -18,10 +18,33 @@ So I can record something I need to remember
 
 ```		
 As a programmer		
-I can see the full text of an individual note on its own page		
+I can see the full text of an individual note on its own page	
 So I can see all the information in the note				
 ```
+```
+As a programmer
+I can use shortcodes like `:fire:` that get converted into emojis like 🔥
+So I can record notes with fun little pictures
 
+```
+
+```
+As a programmer
+I can refresh the page and still see my notes
+So I can remember what I took down
+```
+
+```
+As a programmer
+i want to delete unnecessary note that i have created
+So i can get rid of note that are not valid anymore
+
+```
+```
+As a programmer
+i want to clear my note app 
+So i have fresh single page note maker
+```
 # planning
 
 		MVP		
