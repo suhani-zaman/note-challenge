@@ -40,6 +40,15 @@ function expect(actual) {
                 throw new Error(`expected ${actual} to be ${expected}, but it was not`)
             }
         },
+        notToEqual: function (expected) {
+            if (actual !== expected) {
+                passedToHtml(`Test(PASSED) ${window.describe_block_tag} <br/> ${window.describe_it_tag}`);
+                console.log(`- Test(PASSED) ${window.describe_block_tag}`);
+            } else {
+                failedToHtml(`Test(FAILED) ${window.describe_block_tag} <br/> (${window.describe_it_tag}) expected ${actual} to be ${expected}, but it was not`);
+                throw new Error(`expected ${actual} to be ${expected}, but it was not`)
+            }
+        },
         toThrow: function () {
             let itThrew = false
             try {

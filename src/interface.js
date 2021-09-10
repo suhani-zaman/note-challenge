@@ -4,7 +4,7 @@ window.onload = function () {
 	document.querySelector("#addNote").addEventListener("click", () => {
 		let message = document.querySelector("#noteValue").value;
 		document.querySelector("#noteValue").value = "";
-    noteClass.emoji.getText(message, noteClass);
+    noteClass.emoji.getText(message);
 	});
   document.querySelector('#clearAllNotes').addEventListener("click",() => {
     noteClass.clearAllNotes();

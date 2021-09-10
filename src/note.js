@@ -1,8 +1,9 @@
 class Note {
 	constructor() {
-    this.emoji = new Emoji();
+    this.emoji = new Emoji(this);
 		this.notePad = [];
     this.loadNotes();
+    this.emojiResponse = "";
 	}
 
 	createNote(message, saveMessage) {   
